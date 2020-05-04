@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(new MaterialApp(
-    title: 'IndieGossip',
-    home: new Scaffold(
+void main() => runApp(FriendlyChatApp());
+
+class FriendlyChatApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'IndieGossip',
+      home: ChatScreen(),
+    );
+  }
+}
+
+class ChatScreen extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
-        title: Text('IndieGossip'),
+        title: const Text('IndieGossip'),
       ),
-    ),
-  ));
+    );
+  }
 }
